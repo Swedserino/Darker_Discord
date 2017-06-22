@@ -2,7 +2,8 @@
   @import url(https://fonts.googleapis.com/css?family=Karla);
 
   :root{
-   --main-color: #1e2124;
+   --main-color: #0b0d0e;
+   --accent-color: #242529;
   }
 
     div>*:not(code) {
@@ -40,6 +41,10 @@
 
   .typing{
     background-color: var(--main-color) !important;
+  }
+
+  .channel-members-loading, .channel-members-loading>.background{
+   background-color: #0b0d0e !important;
   }
 
   .guilds-wrapper .guilds .friends-icon:after {
@@ -125,7 +130,7 @@
   }
 
   .body{
-      background-color: var(--main-color);
+      background-color: var(--accent-color);
   }
 
   .flex-spacer.flex-vertical, .scroller-wrap{
@@ -133,7 +138,7 @@
   }
 
   .embed-color-pill{
-   background-color: var(--main-color) !important;
+   background-color: var(--accent-color) !important;
   }
 
   .scroller-fzNley.channel-members{
@@ -228,3 +233,99 @@
   .nameDefaultVoice-1swZoh.name-2SL4ev.overflowEllipsis-3Rxxjf{
    color: white;
   }
+
+  .comment{
+   background-color: var(--accent-color);
+      border: 10px solid var(--accent-color);
+
+      border-radius: 20px;
+  }
+
+  h2>.username-wrapper>.user-name{
+   background-color: #0c0c0e;
+      border: 2px solid #0c0c0e;
+      border-radius: 7px;
+  }
+
+  h2>.username-wrapper>.user-name{
+ background-color: #0c0c0e;
+    border: 2px solid #0c0c0e;
+    border-radius: 7px;
+}
+
+h2>.username-wrapper>.user-name:hover{
+ background-color: black;
+    border: 2px solid black;
+    border-radius: 7px;
+    transition: all 0.3s;
+    font-size: 20px !important;
+}
+
+h2>.username-wrapper>.user-name:not(:hover){
+ background-color: #0c0c0e;
+    border: 2px solid #0c0c0e;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+.timestamp{
+ color: white !important;
+}
+
+.scroller-fzNley.channel-members>h2:after{
+ content: ' ⮟'
+}
+
+.scroller-fzNley.channel-members>h2:before{
+ content: '⮟ '
+}
+
+.nameSpeaking-3ROx9q.margin-reset:before{
+   content: '<';
+      font-weight:bold;
+      text-decoration: underline;
+}
+
+.nameSpeaking-3ROx9q.margin-reset:after{
+   content: '>';
+      font-weight:bold;
+      text-decoration: underline;
+}
+
+
+.channel-name:before{
+    display: none;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.member.member-status.member-status-online:hover, .member.member-status.member-status-offline:hover, .member.member-status.member-status-dnd:hover, .member.member-status.member-status-idle:hover{
+    animation-name: shake;
+        animation-duration: 0.82s;
+    animation-iteration-count: 1;
+}
+
+.message-group.hide-overflow>.avatar-large{
+     transition: all 0.4s;
+}
+
+.message-group.hide-overflow>.avatar-large:hover{
+    width: 50px;
+    height: 50px;
+}
